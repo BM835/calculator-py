@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+
+name: Calculator
+
+description: Just simple python calculator
