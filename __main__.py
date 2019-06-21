@@ -44,7 +44,7 @@ go_div = tk.Button(w, text="/", width=2)
 go_div.place(y=40, x=95)
 go_div.bind("<Button-1>", divide)
 
-result = tk.Label(w)
+result = tkinter.Label(w)
 result.place(y=70, x=0, width=110)
 
 w.mainloop()
