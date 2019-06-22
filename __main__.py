@@ -8,19 +8,23 @@ w.geometry('110x115')
 
 
 def plus (e):
-    result.config(text = calc.add(numinput.get(), numinput1.get()))
+    calc.setMathSign(0)
 
 
 def minus (e):
-    result.config(text = calc.remove(numinput.get(), numinput1.get()))
+    calc.setMathSign(1)
 
 
 def multiply (e):
-    result.config(text = calc.multiplication(numinput.get(), numinput1.get()))
+    calc.setMathSign(2)
 
 
 def divide (e):
-    result.config(text = calc.division(numinput.get(), numinput1.get()))
+    calc.setMathSign(3)
+
+
+def show_result(e):
+    result.config(text=calc.calculate(numinput.get(), numinput1.get()))
     
 
 numinput = tk.Entry(w)
@@ -28,6 +32,7 @@ numinput.pack()
 
 go_res = tk.Button(w, text="=", width=20)
 go_res.place(y=70, x=0)
+go_res.bind("<Button-1>", show_result)
 
 numinput1 = tk.Entry(w, width=20)
 numinput1.place(y=50, x=0)

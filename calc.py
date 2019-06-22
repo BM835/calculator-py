@@ -22,7 +22,7 @@ def setMathSign(signNum): # 0 - `+`; 1 - `-`, 2 - `*`, 3 - `/`
 
 def calculate(a, b):
     global math_sign, result
-    result = "Check inputs"
+    result = "Set math sign!"
     if math_sign == 0:
         result = str(add(a, b))
     elif math_sign == 1:
