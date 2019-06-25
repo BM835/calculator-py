@@ -9,22 +9,43 @@ w.geometry('132x160')
 
 def plus (e):
     calc.setMathSign(0)
+    if calc.num_num == 0:
+        example.config(text=str(calc.get_num())+calc.get_sign())
+    else:
+        example.config(text=example.cget("text")+str(calc.get_num()))
 
 
 def minus (e):
     calc.setMathSign(1)
+    if calc.num_num == 0:
+        example.config(text=str(calc.get_num())+calc.get_sign())
+    else:
+        example.config(text=example.cget("text")+str(calc.get_num()))
 
 
 def multiply (e):
     calc.setMathSign(2)
+    if calc.num_num == 0:
+        example.config(text=str(calc.get_num())+calc.get_sign())
+    else:
+        example.config(text=example.cget("text")+str(calc.get_num()))
 
 
 def divide (e):
     calc.setMathSign(3)
+    if calc.num_num == 0:
+        example.config(text=str(calc.get_num())+calc.get_sign())
+    else:
+        example.config(text=example.cget("text")+str(calc.get_num()))
 
 
 def show_result(e):
     result.config(text=calc.calculate())
+
+
+def add_to_num(e):
+    calc.add_to_num(e.widget.cget("text"))
+    result.config(text=calc.get_num())
 
 
 go_res = tk.Button(w, text="=", width=2)
@@ -50,40 +71,51 @@ go_div.bind("<Button-1>", divide)
 b1 = tk.Button(w, text='1', width=2)
 b1.place(y=43, x=10)
 
-b1 = tk.Button(w, text='2', width=2)
-b1.place(y=43, x=40)
+b2 = tk.Button(w, text='2', width=2)
+b2.place(y=43, x=40)
 
-b1 = tk.Button(w, text='3', width=2)
-b1.place(y=43, x=70)
+b3 = tk.Button(w, text='3', width=2)
+b3.place(y=43, x=70)
 
-b1 = tk.Button(w, text='4', width=2)
-b1.place(y=73, x=10)
+b4 = tk.Button(w, text='4', width=2)
+b4.place(y=73, x=10)
 
-b1 = tk.Button(w, text='5', width=2)
-b1.place(y=73, x=40)
+b5 = tk.Button(w, text='5', width=2)
+b5.place(y=73, x=40)
 
-b1 = tk.Button(w, text='6', width=2)
-b1.place(y=73, x=70)
+b6 = tk.Button(w, text='6', width=2)
+b6.place(y=73, x=70)
 
-b1 = tk.Button(w, text='7', width=2)
-b1.place(y=103, x=10)
+b7 = tk.Button(w, text='7', width=2)
+b7.place(y=103, x=10)
 
-b1 = tk.Button(w, text='8', width=2)
-b1.place(y=103, x=40)
+b8 = tk.Button(w, text='8', width=2)
+b8.place(y=103, x=40)
 
-b1 = tk.Button(w, text='9', width=2)
-b1.place(y=103, x=70)
+b9 = tk.Button(w, text='9', width=2)
+b9.place(y=103, x=70)
 
-b1 = tk.Button(w, text='0', width=2)
-b1.place(y=133, x=40)
+b0 = tk.Button(w, text='0', width=2)
+b0.place(y=133, x=40)
+
+b0.bind("<Button-1>", add_to_num)
+b1.bind("<Button-1>", add_to_num)
+b2.bind("<Button-1>", add_to_num)
+b3.bind("<Button-1>", add_to_num)
+b4.bind("<Button-1>", add_to_num)
+b5.bind("<Button-1>", add_to_num)
+b6.bind("<Button-1>", add_to_num)
+b7.bind("<Button-1>", add_to_num)
+b8.bind("<Button-1>", add_to_num)
+b9.bind("<Button-1>", add_to_num)
 
 answer_style = tk.Style()
 answer_style.configure("BW.TLabel", font=('Comic Sans', 12))
 
-example = tk.Label(w, text="5+5")
+example = tk.Label(w, text="")
 example.place(y=0, x=0, width=110)
 
-result = tk.Label(w, text="10", style='BW.TLabel')
+result = tk.Label(w, text="", style='BW.TLabel')
 result.place(y=20, x=0, width=110)
 
 w.mainloop()
