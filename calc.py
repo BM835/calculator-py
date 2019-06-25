@@ -20,8 +20,8 @@ def setMathSign(signNum): # 0 - `+`; 1 - `-`, 2 - `*`, 3 - `/`
     global math_sign
     math_sign = signNum
 
-def calculate(a, b):
-    global math_sign, result
+def calculate():
+    '''global math_sign, result
     result = "Set math sign!"
     if math_sign == 0:
         result = str(add(a, b))
@@ -31,4 +31,5 @@ def calculate(a, b):
         result = str(multiplication(a, b))
     elif math_sign == 3:
         result = str(division(a, b))
-    return result
+    return result'''
+    pass
