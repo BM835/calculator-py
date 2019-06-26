@@ -9,8 +9,10 @@ def generate():
 
 generate()
 c.setMathSign(0)
-print('\n\n'+str(a) +'+'+ str(b) + '='+ str(c.calculate(a, b)))
-if str(float(a+b)) == str(c.calculate(a, b)):
+c.a = a
+c.b = b
+print('\n\n'+str(a) +'+'+ str(b) + '='+ str(c.calculate()))
+if str(float(a+b)) == str(c.calculate()):
 	print('Add successful\n')
 else:
 	print('\n\nBuild unsuccessful\n'+str(float(a+b)))
@@ -18,8 +20,10 @@ else:
 
 generate()
 c.setMathSign(1)
-print(str(a) +'-'+ str(b) + '='+ c.calculate(a, b))
-if str(float(a-b)) == str(c.calculate(a, b)):
+c.a = a
+c.b = b
+print(str(a) +'-'+ str(b) + '='+ c.calculate())
+if str(float(a-b)) == str(c.calculate()):
 	print('Remove successful\n')
 else:
 	print('\n\nBuild unsuccessful')
@@ -27,8 +31,10 @@ else:
 
 generate()
 c.setMathSign(2)
-print(str(a) +'*'+ str(b) + '='+ c.calculate(a, b))
-if str(float(a*b)) == str(c.calculate(a, b)):
+c.a = a
+c.b = b
+print(str(a) +'*'+ str(b) + '='+ c.calculate())
+if str(float(a*b)) == str(c.calculate()):
 	print('Myltiply successful\n')
 else:
 	print('\n\nBuild unsuccessful')
@@ -36,8 +42,10 @@ else:
 
 generate()
 c.setMathSign(0)
-print(str(a) +'/'+ str(b) + '='+ c.calculate(a, b))
-if str(float(a+b)) == str(c.calculate(a, b)):
+c.a = a
+c.b = b
+print(str(a) +'/'+ str(b) + '='+ c.calculate())
+if str(float(a+b)) == str(c.calculate()):
 	print('Division successful\n')
 else:
 	print('\n\nBuild unsuccessful')
