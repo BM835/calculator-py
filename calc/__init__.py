@@ -68,3 +68,10 @@ def calculate():
     elif math_sign == 3:
         result = str(division(a, b))
     return result
+
+def c():
+    global math_sign, result, a, b
+    math_sign = None
+    num_num = 0
+    a, b = 0, 0
+

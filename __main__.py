@@ -47,6 +47,9 @@ def add_to_num(e):
     calc.add_to_num(e.widget.cget("text"))
     result.config(text=calc.get_num())
 
+def clear(e):
+    calc.c()
+
 
 go_res = tk.Button(w, text="=", width=2)
 go_res.place(y=133, x=70)
@@ -98,6 +101,9 @@ b9.place(y=103, x=70)
 b0 = tk.Button(w, text='0', width=2)
 b0.place(y=133, x=40)
 
+c = tk.Button(w, text='C', width=2)
+c.place(y=133, x=10)
+
 b0.bind("<Button-1>", add_to_num)
 b1.bind("<Button-1>", add_to_num)
 b2.bind("<Button-1>", add_to_num)
@@ -108,6 +114,7 @@ b6.bind("<Button-1>", add_to_num)
 b7.bind("<Button-1>", add_to_num)
 b8.bind("<Button-1>", add_to_num)
 b9.bind("<Button-1>", add_to_num)
+c.bind("<Button-1>", clear)
 
 answer_style = tk.Style()
 answer_style.configure("BW.TLabel", font=('Comic Sans', 12))
