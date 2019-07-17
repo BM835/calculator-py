@@ -49,6 +49,7 @@ def add_to_num(e):
 
 def clear(e):
     calc.c()
+    result.config(text="0")
 
 
 go_res = tk.Button(w, text="=", width=2)
