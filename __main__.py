@@ -8,7 +8,7 @@ import calc
 
 w = tkinter.Tk()
 w.title("Calculator")
-w.geometry('132x160')
+w.geometry('132x165')
 
 
 def plus (e):
