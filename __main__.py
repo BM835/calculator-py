@@ -1,5 +1,9 @@
-import tkinter.ttk as tk
-import tkinter
+try:
+	import tkinter.ttk as tk
+	import tkinter
+except:
+	import Tkinter.ttk as tk
+	import Tkinter
 import calc
 
 w = tkinter.Tk()
