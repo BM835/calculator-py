@@ -1,11 +1,6 @@
 #! /usr/bin/python3
-
-try:
-	import tkinter.ttk as tk
-	import tkinter
-except:
-	import Tkinter.ttk as tk
-	import Tkinter
+import tkinter.ttk as tk
+import tkinter
 import calc
 
 w = tkinter.Tk()
@@ -13,36 +8,36 @@ w.title("Calculator")
 w.geometry('132x165')
 
 
-def plus (e):
+def plus(e):
     calc.setMathSign(0)
     if calc.num_num == 0:
-        example.config(text=str(calc.get_num())+calc.get_sign())
+        example.config(text=str(calc.get_num()) + calc.get_sign())
     else:
-        example.config(text=example.cget("text")+str(calc.get_num()))
+        example.config(text=example.cget("text") + str(calc.get_num()))
 
 
-def minus (e):
+def minus(e):
     calc.setMathSign(1)
     if calc.num_num == 0:
-        example.config(text=str(calc.get_num())+calc.get_sign())
+        example.config(text=str(calc.get_num()) + calc.get_sign())
     else:
-        example.config(text=example.cget("text")+str(calc.get_num()))
+        example.config(text=example.cget("text") + str(calc.get_num()))
 
 
-def multiply (e):
+def multiply(e):
     calc.setMathSign(2)
     if calc.num_num == 0:
-        example.config(text=str(calc.get_num())+calc.get_sign())
+        example.config(text=str(calc.get_num()) + calc.get_sign())
     else:
-        example.config(text=example.cget("text")+str(calc.get_num()))
+        example.config(text=example.cget("text") + str(calc.get_num()))
 
 
-def divide (e):
+def divide(e):
     calc.setMathSign(3)
     if calc.num_num == 0:
-        example.config(text=str(calc.get_num())+calc.get_sign())
+        example.config(text=str(calc.get_num()) + calc.get_sign())
     else:
-        example.config(text=example.cget("text")+str(calc.get_num()))
+        example.config(text=example.cget("text") + str(calc.get_num()))
 
 
 def show_result(e):
@@ -52,6 +47,7 @@ def show_result(e):
 def add_to_num(e):
     calc.add_to_num(e.widget.cget("text"))
     result.config(text=calc.get_num())
+
 
 def clear(e):
     calc.c()
@@ -124,7 +120,7 @@ b9.bind("<Button-1>", add_to_num)
 c.bind("<Button-1>", clear)
 
 answer_style = tk.Style()
-answer_style.configure("BW.TLabel", font=('Comic Sans', 12))
+answer_style.configure("BW.TLabel", font=('Arial', 12))
 
 example = tk.Label(w, text="")
 example.place(y=0, x=0, width=110)
