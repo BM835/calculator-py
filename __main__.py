@@ -9,7 +9,7 @@ w.geometry('132x165')
 
 
 def plus(e):
-    calc.setMathSign(0)
+    calc.set_math_sign(0)
     if calc.num_num == 0:
         example.config(text=str(calc.get_num()) + calc.get_sign())
     else:
@@ -17,7 +17,7 @@ def plus(e):
 
 
 def minus(e):
-    calc.setMathSign(1)
+    calc.set_math_sign(1)
     if calc.num_num == 0:
         example.config(text=str(calc.get_num()) + calc.get_sign())
     else:
@@ -25,7 +25,7 @@ def minus(e):
 
 
 def multiply(e):
-    calc.setMathSign(2)
+    calc.set_math_sign(2)
     if calc.num_num == 0:
         example.config(text=str(calc.get_num()) + calc.get_sign())
     else:
@@ -33,7 +33,7 @@ def multiply(e):
 
 
 def divide(e):
-    calc.setMathSign(3)
+    calc.set_math_sign(3)
     if calc.num_num == 0:
         example.config(text=str(calc.get_num()) + calc.get_sign())
     else:

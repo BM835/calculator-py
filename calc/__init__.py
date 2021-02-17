@@ -2,25 +2,26 @@ math_sign = None
 num_num = 0
 a, b = 0, 0
 
+
 def add(a, b):
-    return float(a)+float(b)
+    return float(a) + float(b)
 
 
 def remove(a, b):
-    return float(a)-float(b)
+    return float(a) - float(b)
 
 
 def multiplication(a, b):
-    return float(a)*float(b)
+    return float(a) * float(b)
 
 
-def division(a,b):
-    return float(a)/float(b) 
+def division(a, b):
+    return float(a) / float(b)
 
 
-def setMathSign(signNum): # 0 - `+`; 1 - `-`, 2 - `*`, 3 - `/`
+def set_math_sign(sign_num):  # 0 - `+`; 1 - `-`, 2 - `*`, 3 - `/`
     global math_sign, num_num
-    math_sign = signNum
+    math_sign = sign_num
     if num_num == 0:
         num_num = 1
     else:
@@ -30,9 +31,9 @@ def setMathSign(signNum): # 0 - `+`; 1 - `-`, 2 - `*`, 3 - `/`
 def add_to_num(num):
     global a, b, num_num
     if num_num == 0:
-        a = float(str(int(a))+str(int(num)))
+        a = float(str(int(a)) + str(int(num)))
     else:
-        b = float(str(int(b))+str(int(num)))
+        b = float(str(int(b)) + str(int(num)))
 
 
 def get_num():
@@ -55,7 +56,6 @@ def get_sign():
     return result
 
 
-
 def calculate():
     global math_sign, result, a, b
     result = "Set math sign!"
@@ -69,9 +69,9 @@ def calculate():
         result = str(division(a, b))
     return result
 
+
 def c():
     global math_sign, result, a, b
     math_sign = None
     num_num = 0
     a, b = 0, 0
-
